@@ -41,12 +41,27 @@ let gameCounter = 100
 
 gameCounter++ //prefix and postfix in JS
 
-console.log(gameCounter);
+// console.log(gameCounter);
 
-console.log(null > 0)
-console.log(null >= 0)
-console.log(null == 0)
+// console.log(null > 0)
+// console.log(null >= 0)
+// console.log(null == 0)
 
 // === strict check, also check datatype 
 
-console.log("2" === 2);
+// console.log("2" === 2);
+
+
+//Primitive datatype
+
+// 7 types : String, Number, Boolean, Null, undefined, symbol, bigint
+
+
+const id = Symbol('123')
+const anotherId = Symbol('123')
+
+console.log(id === anotherId)
+
+// Reference (non premitive datatype)
+
+// Array, Objects, Functions
