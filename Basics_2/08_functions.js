@@ -42,20 +42,20 @@ const result = addTwonumber(2,3)
 
 
 
-function isLoggedIn(username = "CAPTAIN"){
-    // if(username === undefined){
-    //     console.log("Please enter username");
-    //     return
-    // }
-    if(!undefined){
-        console.log("Please enter username");
-        return
-    }
-    return `${username} just logged in`
-}
+// function isLoggedIn(username = "captain"){
+//     // if(username === undefined){
+//     //     console.log("Please enter username");
+//     //     return
+//     // }
+//     if(undefined){
+//         console.log("Please enter username");
+//         return
+//     }
+//     return `${username} just logged in`
+// }
 
 // console.log(isLoggedIn("Captain"))
-console.log(isLoggedIn("CAPTAIN"))
+// console.log(isLoggedIn("captain"))
 
 
 
