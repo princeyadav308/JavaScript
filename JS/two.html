@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async code</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hello World!</h2>
+
+    <button id="stop">stop</button>
+    
+
+ 
+    <script>
+        const sayCaptain = function(){
+            console.log("Captain bruce");
+         
+        }
+        const changeText = function(){
+            document.querySelector('h2').innerHTML = "Best Captain"
+
+        }
+        setTimeout(changeText,2000)
+
+        const changeMe = setTimeout(changeText, 3000);
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(changeMe)
+            console.log("Stopped");
+            
+        })
+        
+
+    </script>
+</body>
+</html>

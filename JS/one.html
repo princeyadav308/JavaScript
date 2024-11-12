@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <li><img src="https://cdn.pixabay.com/photo/2020/01/26/20/14/computer-4795762_1280.jpg" width="200px" id="photoshop"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" width="200px" id="japan"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2021/11/16/15/35/technology-6801334_1280.jpg" width="200px" id="river"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2023/10/07/14/24/smartwatch-8300238_1280.jpg" width="200px" id="google"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2016/10/30/13/46/smart-watch-1783180_1280.jpg" width="200px" id="youtube"></li>
+        <li><a href="https://www.google.com" id="google-website">google website</a></li>
+    </ul>
+</body>
+    <script>
+        // old apprach 
+
+        // document.getElementById('google').onclick = function(){
+        //     alert('google clicked')
+        // }
+
+        //Types, Timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, altkey, ctrlkey, shiftkey, keyCode, 
+
+        // attachEvent()
+        // JQuery - on eventListener
+
+
+        // Event propogation (bubbling)
+        // when both statment is false then the code executes from down wards to upwards
+
+        // Event propogation (capturing)
+        // when both statement is true then the code executes normally from top to bottom
+
+        // by default it is false
+
+
+
+        //////////////////////////////
+        // code
+
+        // document.getElementById('images').addEventListener('click', function (e){
+        //     console.log('Clicked inside the Ul');
+        // },false)
+
+        // document.getElementById('google').addEventListener('click', function (e){
+        //     console.log('Google is clicked');
+        //     e.stopPropagation()
+        // },false)
+
+
+        // document.getElementById('google-website').addEventListener('click',
+        // function(e){
+        //     e.preventDefault()
+        //     console.log('google clicked');
+        // },false)
+
+
+        document.querySelector('#images').addEventListener(
+        'click', function(e){
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);           
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+
+            }
+
+
+
+            // another way 
+
+
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+        )
+   
+
+
+
+
+    </script>
+</html>
